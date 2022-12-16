@@ -1,0 +1,153 @@
+/* caracteristicas index */
+
+.gridIndex {
+    grid-area: section;
+    height: 100%;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-areas: 
+    "textoIndex imgIndex";
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: auto;
+    align-content: center;
+}
+
+.textoIndex {
+    grid-area: textoIndex;
+    h1 {
+        margin-left: 100px;
+    }
+}
+
+.parrafoIndex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 100px;
+
+    p {
+        font-size: 20px;
+    }
+}
+
+.imgIndex {
+    grid-area: imgIndex;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+    img {
+        width: 54rem;
+        border-radius: 1rem;
+        margin-right: 25px;
+    }
+}
+
+.carousel-item-next, .carousel-item-prev, .carousel-item.active {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Grid Index 1200px */
+
+@media screen and (max-width: 1200px) {
+    .textoIndex {
+        h1 {
+            font-size: 40px;
+            margin-left: 40px;
+        }
+    }
+    
+    .parrafoIndex {
+        margin: 30px 40px;
+    }
+    
+    .imgIndex img{
+            width: 42rem;
+    }
+}
+
+/* Grid Index 991.40px */
+
+@media screen and (max-width: 991.40px) {
+    .gridIndex {
+        grid-area: section;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-areas:
+        "textoIndex " 
+        "imgIndex   ";
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(2, 500px);
+        align-content: center;
+    }
+
+    .textoIndex {
+        grid-area: textoIndex;
+        @include flex-column-accentro-jccentro;
+        align-items: center;
+    
+        h1 {
+            margin: $reset;
+        }
+
+        p {
+            font-size: 25px;
+        }
+    }
+    
+    .imgIndex {
+        grid-area: imgIndex;
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        margin: $reset;
+    }
+}
+
+/* Grid Index 769px */
+
+@media screen and (max-width: 769px) {
+    .gridIndex {
+        @include flex-column-accentro-jccentro;
+        margin: $reset;
+    }
+    
+    .textoIndex {
+        align-content: flex-start;
+        align-items: center;
+        
+        p {
+            font-size: 25px;
+        }
+    }
+
+    .imgIndex {
+        align-items: center;
+        justify-items: center;
+        width: 38rem;
+        height: 32rem;
+        border-radius: 1rem;
+    
+        .carousel-inner img {
+            margin-left: 25px;
+        }
+    }
+}
+
+/* Grid Index 480px */
+
+@media screen and (max-width: 480px) {
+    .textoIndex p {
+        font-size: 20px;
+    }
+
+    .imgIndex {
+        width: 34rem;
+        height: 28rem;
+        margin: $reset;
+    }
+}

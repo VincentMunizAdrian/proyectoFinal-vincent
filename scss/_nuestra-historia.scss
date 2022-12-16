@@ -1,0 +1,306 @@
+/* caracteristicas historia */
+
+.gridHistoria {
+    grid-area: section;
+    height: 100%;
+    display: grid;
+    grid-gap: 5rem;
+    grid-template-areas: 
+    "historiaVieja"
+    "historiaNueva";
+    grid-template-rows: repeat(2, auto);
+    align-content: center;
+    margin: 0 100px;
+}
+
+.historiaVieja {
+    grid-area: historiaVieja;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-areas:
+    "textoHistoriaVieja fotoVieja";
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: auto;
+    align-content: center;
+}
+
+.textoHistoriaVieja {
+    grid-area: textoHistoriaVieja;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    justify-content: center;
+
+    p {
+        font-style: italic;
+        font-size: 2.5rem;
+        gap: 2rem;
+    }
+}
+
+.tituloHistoria {
+    align-content: left;
+    justify-content: left;
+}
+
+.fotoVieja {
+    grid-area: fotoVieja;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-items: flex-end;
+
+    img {
+        width: 54rem;
+        height: 40rem;
+        border-radius: 1rem;
+    }
+}
+
+.historiaNueva {
+    grid-area: historiaNueva;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas: 
+    "fotoNueva textoHistoriaNueva";
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: auto;
+    justify-content: center;
+    align-content: center;
+}
+
+.fotoNueva {
+    grid-area: fotoNueva;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-items: flex-start;
+
+    img {
+        width: 54rem;
+        height: 40rem;
+        border-radius: 1rem;
+    }
+}
+
+.textoHistoriaNueva {
+    grid-area: textoHistoriaNueva;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    justify-content: center;
+
+    p {
+        font-size: 2.5rem;
+        text-align: right;
+    }
+}
+
+/* Grid Historia 1200px */
+
+@media screen and (max-width: 1200px) {
+    .gridHistoria {
+        grid-area: section;
+        height: 100%;
+        display: grid;
+        grid-gap: 10rem;
+        grid-template-areas: 
+        "historiaVieja"
+        "historiaNueva";
+        grid-template-rows: repeat(2, auto);
+        align-content: center;
+        margin: 20px;
+    }
+    
+
+    .historiaVieja {
+        grid-area: historiaVieja;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas:
+        "textoHistoriaVieja fotoVieja";
+        grid-template-columns: repeat(2, 2fr);
+        grid-template-rows: auto;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    .textoHistoriaVieja {
+        grid-area: textoHistoriaVieja;
+        display: flex;
+        flex-direction: column;
+        align-content: flex-end;
+        justify-content: center;
+        height: 40rem;
+    
+        p {
+            font-style: italic;
+            font-size: 2.5rem;
+            gap: 2rem;
+        }
+    }
+    
+    .tituloHistoria {
+        align-content: left;
+        justify-content: left;
+    }
+    
+    .fotoVieja {
+        grid-area: fotoVieja;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-items: flex-end;
+    
+        img {
+            width: 50rem;
+            height: 40rem;
+            border-radius: 1rem;
+        }
+    }
+    
+    .historiaNueva {
+        grid-area: historiaNueva;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas: 
+        "fotoNueva textoHistoriaNueva";
+        grid-template-columns: repeat(2, 2fr);
+        grid-template-rows: auto;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    .fotoNueva {
+        grid-area: fotoNueva;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-items: flex-start;
+    
+        img {
+            width: 50rem;
+            height: 40rem;
+            border-radius: 1rem;
+        }
+    }
+    
+    .textoHistoriaNueva {
+        grid-area: textoHistoriaNueva;
+        display: flex;
+        flex-direction: column;
+        align-content: flex-end;
+        justify-content: center;
+        height: 40rem;
+    
+        p {
+            font-size: 2.5rem;
+            text-align: right;
+        }
+    }
+}
+
+/* Grid Historia 991.40px */
+
+@media screen and (max-width: 991.40px) {
+    .gridHistoria {
+        grid-area: section;
+        display: grid;
+        grid-gap: 4rem;
+        grid-template-areas: 
+        "historiaVieja"
+        "historiaNueva";
+        grid-template-columns: auto;
+        grid-template-rows: repeat(2, auto);
+        align-content: center;
+    }
+
+    .historiaVieja {
+        grid-area: historiaVieja;
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-areas:
+        "textoHistoriaVieja" 
+        "fotoVieja";
+        grid-template-columns: auto;
+        grid-template-rows: repeat(2, auto);
+        justify-content: center;
+        align-content: center;
+    }
+    
+    .textoHistoriaVieja {
+        grid-area: textoHistoriaVieja;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        height: auto;
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            font-style: italic;
+            font-size: 25px;
+            gap: 2rem;
+        }
+    }
+    
+    .fotoVieja {
+        grid-area: fotoVieja;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+    
+        img {
+            width: 42rem;
+            height: 40rem;
+            border-radius: 1rem;
+            margin: 0;
+        }
+    }
+    
+    .historiaNueva {
+        grid-area: historiaNueva;
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-areas: 
+        "textoHistoriaNueva"
+        "fotoNueva";
+        grid-template-columns: auto;
+        grid-template-rows: repeat(2, auto);
+        justify-content: center;
+        align-content: center;
+    }
+    
+    .fotoNueva {
+        grid-area: fotoNueva;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+    
+        img {
+            width: 42rem;
+            height: 40rem;
+            border-radius: 1rem;
+            margin: 0;
+        }
+    }
+    
+    .textoHistoriaNueva {
+        grid-area: textoHistoriaNueva;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        height: auto;
+    
+        p {
+            text-align: center;
+            font-size: 25px;
+        }
+    }
+}

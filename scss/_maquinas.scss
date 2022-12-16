@@ -1,0 +1,300 @@
+/* caracteristicas maquinas */
+
+.gridMaquinas {
+    display: grid;
+    grid-template-areas: 
+    "tituloMaquinas"
+    "listaMaquinas"
+    "rectilinea"
+    "torno"
+    "planchadora"
+    "balancin"
+    "caldera";
+    grid-gap: 5rem;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(7, auto);
+    padding: 2rem;
+}
+
+.textoRectilinea, .textoTorno, .textoPlanchadora, .textoBalancin, .textoCaldera {
+    p{
+        font-size: 20px;
+        @include flex-column-jccentro;
+        align-items: center;
+        }
+    
+    .listaEspesificaciones li{
+        font-size: 15px;
+        text-decoration: none;
+    }
+}
+
+.tituloMaquinas {
+    grid-area: tituloMaquinas;
+    @include flex-column-aicentro;
+}
+
+#listaMaquinas {
+    grid-area: listaMaquinas;
+    @include flex-column-aicentro;
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 25px;
+        }
+    }
+
+#rectilinea {
+    grid-area: rectilinea;
+    display: grid;
+    grid-template-areas:
+    "textoRectilinea imgRectilinea";
+    @include gridtc-gridtr-gridgap-aligni-margin-bc-borderr-padding;
+
+    .textoRectilinea {
+        grid-area: textoRectilinea;
+        @include flex-column-accentro-jccentro;
+    }
+
+    .imgRectilinea {
+        grid-area: imgRectilinea;
+        @include flex-column-aicentro;
+
+        img {
+            width: 74rem;
+            height: 50rem;
+            border-radius: 1rem;
+        }
+    }
+}
+
+#torno {
+    grid-area: torno;
+    display: grid;
+    grid-template-areas:
+    "textoTorno imgTorno";
+    @include gridtc-gridtr-gridgap-aligni-margin-bc-borderr-padding;
+}
+
+.textoTorno {
+    grid-area: textoTorno;
+    @include flex-column-accentro-jccentro;    
+}
+
+.imgTorno {
+    grid-area: imgTorno;
+    @include flex-column-aicentro;
+
+    img {
+        @include ancho-alto-bordes;
+    }
+}
+
+#planchadora {
+    grid-area: planchadora;
+    display: grid;
+    grid-template-areas:
+    "textoPlanchadora imgPlanchadora";
+    @include gridtc-gridtr-gridgap-aligni-margin-bc-borderr-padding;
+}
+
+.textoPlanchadora {
+    grid-area: textoPlanchadora;
+    @include flex-column-accentro-jccentro;    
+}
+
+.imgPlanchadora {
+    grid-area: imgPlanchadora;
+    @include flex-column-aicentro;
+
+    img {
+        @include ancho-alto-bordes;
+    }
+}
+
+#balancin {
+    grid-area: balancin;
+    display: grid;
+    grid-template-areas:
+    "textoBalancin imgBalancin";
+    @include gridtc-gridtr-gridgap-aligni-margin-bc-borderr-padding;
+}
+
+.textoBalancin {
+    grid-area: textoBalancin;
+    @include flex-column-accentro-jccentro;    
+}
+
+.imgBalancin {
+    grid-area: imgBalancin;
+    @include flex-column-aicentro;
+
+    img {
+        @include ancho-alto-bordes;
+    }
+}
+
+#caldera {
+    grid-area: caldera;
+    display: grid;
+    grid-template-areas:
+    "textoCaldera imgCaldera";
+    @include gridtc-gridtr-gridgap-aligni-margin-bc-borderr-padding;
+}
+
+.textoCaldera {
+    grid-area: textoCaldera;
+    @include flex-column-accentro-jccentro;    
+}
+
+.imgCaldera {
+    grid-area: imgCaldera;
+    @include flex-column-aicentro;
+
+    img {
+        @include ancho-alto-bordes;
+    }
+}
+
+/* Grid Maquinas 1200px */
+
+@media screen and (max-width: 1200px) {
+    .gridMaquinas {
+        padding: $reset;
+    }
+    
+    .textoRectilinea, .textoTorno, .textoPlanchadora, .textoBalancin, .textoCaldera {
+        p{
+            font-size: 18px;
+            }
+    }
+    
+    #rectilinea, #torno, #planchadora, #balancin, #caldera {
+        grid-template-rows: 55vw;
+        margin: 15px;
+        padding: 40px;
+    }
+
+    .imgRectilinea, .imgTorno, .imgPlanchadora, .imgBalancin, .imgCaldera {
+        img {
+            width: 68rem;
+                height: 45rem;
+        }
+    }
+}    
+
+/* Grid Maquinas 991.40 */
+
+@media screen and (max-width: 991.40px) {
+    .gridMaquinas {
+        margin: 50px;
+    }
+
+    .textoRectilinea, .textoTorno, .textoPlanchadora, .textoBalancin, .textoCaldera {
+        p{
+            font-size: 15px;
+            }
+    }
+    
+    #rectilinea, #torno, #planchadora, #balancin, #caldera {
+        grid-template-rows: 62vw;
+        margin: 12.5px;
+        padding: 30px;
+    }
+
+    .imgRectilinea, .imgTorno, .imgPlanchadora, .imgBalancin, .imgCaldera {
+        img {
+            width: 58rem;
+            height: 40rem;
+        }
+    }
+}
+
+/* Grid Maquinas 768 */
+
+@media screen and (max-width: 768px) {
+    .imgRectilinea, .imgTorno, .imgPlanchadora, .imgBalancin, .imgCaldera {
+        img {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+            height: 250px;
+        }
+    }
+
+    .gridMaquinas {
+        display: grid;
+        grid-template-areas: 
+        "tituloMaquinas"
+        "listaMaquinas"
+        "rectilinea"
+        "torno"
+        "planchadora"
+        "balancin"
+        "caldera";
+        grid-gap: 30px;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(7, auto);
+        padding: $reset;
+        margin: $reset;
+    }
+
+    .tituloMaquinas {
+        grid-area: tituloMaquinas;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .listaMaquinas {
+        grid-area: listaMaquinas;
+    }
+
+    #rectilinea {
+        grid-area: rectilinea;
+        @include flex-column-accentro-jccentro;
+    }    
+    
+    #torno {
+        grid-area: torno;
+        @include flex-column-accentro-jccentro;
+    }
+
+    #planchadora {
+        grid-area: planchadora;
+        @include flex-column-accentro-jccentro;
+    }
+
+    #balancin {
+        grid-area: balancin;
+        @include flex-column-accentro-jccentro;
+        
+    }
+
+    #caldera {
+        grid-area: caldera;
+        @include flex-column-accentro-jccentro;
+    }
+
+    .rectilineaTitulo, .tornoTitulo, .planchadoraTitulo, .balancinTitulo, .calderaTitulo {
+        text-align: start;
+
+        h2 {
+            font-size: 30px;
+        }
+    }
+
+    .textoRectilinea, .textoTorno, .textoPlanchadora, .textoBalancin, .textoCaldera {
+        align-content: center;
+        justify-content: center;        
+            
+        p {
+            font-size: 15px;
+        }
+    }
+}

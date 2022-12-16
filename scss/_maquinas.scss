@@ -217,16 +217,6 @@
 /* Grid Maquinas 768 */
 
 @media screen and (max-width: 768px) {
-    .imgRectilinea, .imgTorno, .imgPlanchadora, .imgBalancin, .imgCaldera {
-        img {
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: auto;
-            height: 250px;
-        }
-    }
-
     .gridMaquinas {
         display: grid;
         grid-template-areas: 
@@ -297,4 +287,14 @@
             font-size: 15px;
         }
     }
+
+    .imgRectilinea, .imgTorno, .imgPlanchadora, .imgBalancin, .imgCaldera {
+        img {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 38rem;
+        }
+    }
+
 }

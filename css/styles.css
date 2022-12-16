@@ -931,13 +931,6 @@ Body {
 }
 /* Grid Maquinas 768 */
 @media screen and (max-width: 768px) {
-  .imgRectilinea img, .imgTorno img, .imgPlanchadora img, .imgBalancin img, .imgCaldera img {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-    height: 250px;
-  }
   .gridMaquinas {
     display: grid;
     grid-template-areas: "tituloMaquinas" "listaMaquinas" "rectilinea" "torno" "planchadora" "balancin" "caldera";
@@ -1003,6 +996,12 @@ Body {
   }
   .textoRectilinea p, .textoTorno p, .textoPlanchadora p, .textoBalancin p, .textoCaldera p {
     font-size: 15px;
+  }
+  .imgRectilinea img, .imgTorno img, .imgPlanchadora img, .imgBalancin img, .imgCaldera img {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 38rem;
   }
 }
 /* caracteristicas contacto */
@@ -1107,6 +1106,29 @@ Body {
 }
 /* Grid Contacto 480px */
 @media screen and (max-width: 480px) {
+  .cajaComentarios {
+    padding: 10px;
+    margin: 0 100px;
+  }
+  .cajaComentarios input {
+    font-size: 15px;
+  }
+  .cajaComentarios textarea {
+    font-size: 15px;
+  }
+  .cajaComentarios p {
+    font-size: 8px;
+  }
+  .fuenteLegend {
+    font-size: 15px;
+  }
+  .cajaUbicacion iframe {
+    width: 250px;
+    height: 250px;
+  }
+  .cajaUbicacion p {
+    font-size: 15px;
+  }
   .imgChatFooter {
     display: block;
   }
